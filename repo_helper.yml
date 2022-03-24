@@ -1,0 +1,37 @@
+# Configuration for 'repo_helper' (https://github.com/domdfcoding/repo_helper)
+---
+modname: 'tox-raspi-ci'
+copyright_years: 2022
+author: 'Dominic Davis-Foster'
+email: 'dominic@davis-foster.co.uk'
+username: 'domdfcoding'
+version: '0.0.0'
+license: 'MIT'
+short_desc: 'tox integration for raspi-ci.'
+
+enable_conda: False
+enable_docs: False
+use_whey: true
+on_pypi: false
+
+python_versions:
+ - 3.7
+ - 3.8
+ - 3.9
+ - "3.10"
+
+entry_points:
+ tox:
+  - raspi-ci = tox_raspi_ci
+
+classifiers:
+ - 'Development Status :: 3 - Alpha'
+ - 'Framework :: tox'
+ - 'Intended Audience :: Developers'
+ - 'Topic :: Software Development :: Quality Assurance'
+ - 'Topic :: Software Development :: Testing'
+ - 'Topic :: Software Development :: Testing :: Unit'
+
+keywords:
+ - tox
+ - tox-plugin

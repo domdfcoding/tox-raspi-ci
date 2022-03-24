@@ -1,0 +1,34 @@
+py37-attrs19.3 create: .../.tox/py37-attrs19.3
+py37-attrs19.3 run-test-pre: PYTHONHASHSEED='1234'
+py37-attrs19.3 run-test: commands[0] | python --version
+py37-attrs20.2 create: .../.tox/py37-attrs20.2
+py37-attrs20.2 run-test-pre: PYTHONHASHSEED='1234'
+py37-attrs20.2 run-test: commands[0] | python --version
+py38-attrs19.3 create: .../.tox/py38-attrs19.3
+py38-attrs19.3 run-test-pre: PYTHONHASHSEED='1234'
+py38-attrs19.3 run-test: commands[0] | python --version
+py38-attrs20.2 create: .../.tox/py38-attrs20.2
+py38-attrs20.2 run-test-pre: PYTHONHASHSEED='1234'
+py38-attrs20.2 run-test: commands[0] | python --version
+py39-attrs19.3 create: .../.tox/py39-attrs19.3
+py39-attrs19.3 run-test-pre: PYTHONHASHSEED='1234'
+py39-attrs19.3 run-test: commands[0] | python --version
+py39-attrs20.2 create: .../.tox/py39-attrs20.2
+py39-attrs20.2 run-test-pre: PYTHONHASHSEED='1234'
+py39-attrs20.2 run-test: commands[0] | python --version
+mypy create: .../.tox/mypy
+mypy run-test-pre: PYTHONHASHSEED='2468'
+mypy run-test: commands[0] | python -c 'print('"'"'This is the mypy testenv'"'"')'
+build create: .../.tox/build
+build run-test-pre: PYTHONHASHSEED='5678'
+build run-test: commands[0] | python -c 'print('"'"'This is the build testenv'"'"')'
+___________________________________ summary ____________________________________
+  py37-attrs19.3: commands succeeded
+  py37-attrs20.2: commands succeeded
+  py38-attrs19.3: commands succeeded
+  py38-attrs20.2: commands succeeded
+  py39-attrs19.3: commands succeeded
+  py39-attrs20.2: commands succeeded
+  mypy: commands succeeded
+  build: commands succeeded
+  congratulations :)

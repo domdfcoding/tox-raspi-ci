@@ -1,0 +1,14 @@
+py37-attrs19.3 create: .../.tox/py37-attrs19.3
+py37-attrs19.3 run-test-pre: PYTHONHASHSEED='1234'
+py37-attrs19.3 run-test: commands[0] | python --version
+py37-attrs20.2 create: .../.tox/py37-attrs20.2
+py37-attrs20.2 run-test-pre: PYTHONHASHSEED='1234'
+py37-attrs20.2 run-test: commands[0] | python --version
+mypy create: .../.tox/mypy
+mypy run-test-pre: PYTHONHASHSEED='2468'
+mypy run-test: commands[0] | python -c 'print('"'"'This is the mypy testenv'"'"')'
+___________________________________ summary ____________________________________
+  py37-attrs19.3: commands succeeded
+  py37-attrs20.2: commands succeeded
+  mypy: commands succeeded
+  congratulations :)
