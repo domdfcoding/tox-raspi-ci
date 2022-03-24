@@ -17,7 +17,7 @@ tox-raspi-ci
 	:widths: 10 90
 
 	* - Tests
-	  - |actions_linux| |actions_windows| |actions_macos| |coveralls|
+	  - |actions_linux| |coveralls|
 	* - Activity
 	  - |commits-latest| |commits-since| |maintained|
 	* - QA
@@ -28,14 +28,6 @@ tox-raspi-ci
 .. |actions_linux| image:: https://github.com/domdfcoding/tox-raspi-ci/workflows/Linux/badge.svg
 	:target: https://github.com/domdfcoding/tox-raspi-ci/actions?query=workflow%3A%22Linux%22
 	:alt: Linux Test Status
-
-.. |actions_windows| image:: https://github.com/domdfcoding/tox-raspi-ci/workflows/Windows/badge.svg
-	:target: https://github.com/domdfcoding/tox-raspi-ci/actions?query=workflow%3A%22Windows%22
-	:alt: Windows Test Status
-
-.. |actions_macos| image:: https://github.com/domdfcoding/tox-raspi-ci/workflows/macOS/badge.svg
-	:target: https://github.com/domdfcoding/tox-raspi-ci/actions?query=workflow%3A%22macOS%22
-	:alt: macOS Test Status
 
 .. |actions_flake8| image:: https://github.com/domdfcoding/tox-raspi-ci/workflows/Flake8/badge.svg
 	:target: https://github.com/domdfcoding/tox-raspi-ci/actions?query=workflow%3A%22Flake8%22

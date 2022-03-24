@@ -38,7 +38,7 @@ base-classifiers = [
 ]
 python-versions = [ "3.7", "3.8", "3.9", "3.10",]
 python-implementations = [ "CPython",]
-platforms = [ "Windows", "macOS", "Linux",]
+platforms = [ "Linux",]
 license-key = "MIT"
 package = "tox_raspi_ci"
 
