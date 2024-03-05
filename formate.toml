@@ -49,5 +49,5 @@ known_third_party = [
     "tox",
     "tox_envlist",
 ]
-known_first_party = "tox_raspi_ci"
+known_first_party = [ "tox_raspi_ci",]
 line_length = 115
