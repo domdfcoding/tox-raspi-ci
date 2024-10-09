@@ -64,7 +64,7 @@ tox-raspi-ci
 	:target: https://github.com/domdfcoding/tox-raspi-ci/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2022
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2024
 	:alt: Maintenance
 
 .. end shields
