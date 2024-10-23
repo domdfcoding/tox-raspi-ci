@@ -4,8 +4,8 @@ from typing import List
 
 # 3rd party
 import pytest
-import tox  # type: ignore
-import tox.reporter  # type: ignore
+import tox  # type: ignore[import]
+import tox.reporter  # type: ignore[import]
 from coincidence.regressions import AdvancedFileRegressionFixture
 from domdf_python_tools.paths import PathPlus
 from testing_tox import prepare_stdout, run_tox
@@ -32,12 +32,11 @@ manual_envs = f"py{sys.version_info[0]}{sys.version_info[1]}-attrs{{19.3,20.2}},
 				pytest.param(["--raspi-ci", "-e", "mypy"], id="invalid_combo"),
 				]
 		)
+@pytest.mark.usefixtures("version", "os_sep")
 def test_tox_raspi_ci(
 		capsys,
 		command: List[str],
 		toxinidir: PathPlus,
-		version,
-		os_sep,
 		advanced_file_regression: AdvancedFileRegressionFixture,
 		):
 	tox.reporter._INSTANCE.tw._file = sys.stdout
@@ -51,7 +50,8 @@ def test_tox_raspi_ci(
 		advanced_file_regression.check(prepare_stdout(capout.out, toxinidir))
 
 
-def test_tox_raspi_ci_no_command(capsys, toxinidir: PathPlus, os_sep):
+@pytest.mark.usefixtures("os_sep")
+def test_tox_raspi_ci_no_command(capsys, toxinidir: PathPlus):
 	# The output varies depending on the versions of python installed on the host
 	tox.reporter._INSTANCE.tw._file = sys.stdout
 
@@ -64,7 +64,8 @@ def test_tox_raspi_ci_no_command(capsys, toxinidir: PathPlus, os_sep):
 		assert capout.out
 
 
-def test_tox_raspi_ci_envvar(capsys, toxinidir: PathPlus, os_sep, monkeypatch):
+@pytest.mark.usefixtures("os_sep")
+def test_tox_raspi_ci_envvar(capsys, toxinidir: PathPlus, monkeypatch):
 	# The output varies depending on the versions of python installed on the host
 
 	monkeypatch.setenv("RASPI_CI", '1')

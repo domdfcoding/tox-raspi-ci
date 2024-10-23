@@ -30,12 +30,11 @@ manual_envs = f"py{sys.version_info[0]}{sys.version_info[1]},mypy"
 				pytest.param(["--raspi-ci", "-e", "mypy"], id="invalid_combo"),
 				]
 		)
+@pytest.mark.usefixtures("version", "os_sep")
 def test_tox_raspi_ci(
 		capsys,
 		command: List[str],
 		toxinidir: PathPlus,
-		version: str,
-		os_sep,
 		advanced_file_regression: AdvancedFileRegressionFixture,
 		):
 
@@ -48,7 +47,8 @@ def test_tox_raspi_ci(
 		advanced_file_regression.check(prepare_stdout(capout.out, toxinidir))
 
 
-def test_tox_raspi_ci_no_command(capsys, toxinidir: PathPlus, os_sep, monkeypatch):
+@pytest.mark.usefixtures("os_sep")
+def test_tox_raspi_ci_no_command(capsys, toxinidir: PathPlus, monkeypatch):
 	# The output varies depending on the versions of python installed on the host
 	monkeypatch.setenv("RASPI_CI", '0')
 
@@ -61,7 +61,8 @@ def test_tox_raspi_ci_no_command(capsys, toxinidir: PathPlus, os_sep, monkeypatc
 		assert capout.out
 
 
-def test_tox_raspi_ci_envvar(capsys, toxinidir: PathPlus, os_sep, monkeypatch):
+@pytest.mark.usefixtures("os_sep")
+def test_tox_raspi_ci_envvar(capsys, toxinidir: PathPlus, monkeypatch):
 	# The output varies depending on the versions of python installed on the host
 
 	monkeypatch.setenv("RASPI_CI", '1')

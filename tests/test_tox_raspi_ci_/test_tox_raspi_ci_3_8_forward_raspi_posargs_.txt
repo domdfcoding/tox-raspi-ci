@@ -8,7 +8,6 @@ py39 create: .../.tox/py39
 py39 run-test-pre: PYTHONHASHSEED='1234'
 py39 run-test: commands[0] | python --version
 py310-dev create: .../.tox/py310-dev
-py310-dev installed: .../.tox/py310-dev/lib/python3.10/site-packages/pip/_internal/locations/_distutils.py:9: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives,  from distutils.cmd import Command as DistutilsCommand,/usr/lib/python3.10/distutils/command/install.py:13: DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead,  from distutils.sysconfig import get_config_vars
 py310-dev run-test-pre: PYTHONHASHSEED='1234'
 py310-dev run-test: commands[0] | python --version
 mypy create: .../.tox/mypy

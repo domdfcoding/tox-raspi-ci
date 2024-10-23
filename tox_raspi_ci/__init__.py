@@ -38,9 +38,9 @@ from itertools import chain
 from typing import TYPE_CHECKING, Dict, List
 
 # 3rd party
-import pluggy  # type: ignore
-import tox.config  # type: ignore
-import tox.reporter  # type: ignore
+import pluggy
+import tox.config  # type: ignore[import]
+import tox.reporter  # type: ignore[import]
 from braceexpand import braceexpand
 from tox_envlist import DELIMITERS
 
@@ -63,7 +63,7 @@ option_name = "--raspi-ci"
 
 
 @hookimpl
-def tox_addoption(parser: tox.config.Parser):
+def tox_addoption(parser: tox.config.Parser) -> None:
 	"""
 	Add a command line option to choose a different envlist.
 	"""
@@ -77,7 +77,7 @@ def tox_addoption(parser: tox.config.Parser):
 
 
 @hookimpl
-def tox_configure(config: tox.config.Config):
+def tox_configure(config: tox.config.Config) -> tox.config.Config:
 	"""
 	Parse the command line and ini options.
 	"""
