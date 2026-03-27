@@ -39,8 +39,8 @@ from typing import TYPE_CHECKING, Dict, List
 
 # 3rd party
 import pluggy
-import tox.config  # type: ignore[import]
-import tox.reporter  # type: ignore[import]
+import tox.config  # type: ignore[import-untyped]
+import tox.reporter  # type: ignore[import-untyped]
 from braceexpand import braceexpand
 from tox_envlist import DELIMITERS
 

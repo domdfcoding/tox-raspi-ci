@@ -4,8 +4,8 @@ from typing import List
 
 # 3rd party
 import pytest
-import tox  # type: ignore[import]
-import tox.reporter  # type: ignore[import]
+import tox  # type: ignore[import-untyped]
+import tox.reporter  # type: ignore[import-untyped]
 from coincidence.regressions import AdvancedFileRegressionFixture
 from domdf_python_tools.paths import PathPlus
 from testing_tox import prepare_stdout, run_tox
