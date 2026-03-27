@@ -28,7 +28,7 @@ manual_envs = f"py{sys.version_info[0]}{sys.version_info[1]},mypy"
 				pytest.param(["--raspi-ci"], id="raspi"),
 				pytest.param(["--raspi-ci", "--", "--verbose"], id="raspi_posargs"),
 				pytest.param(["--raspi-ci", "-e", "mypy"], id="invalid_combo"),
-				]
+				],
 		)
 @pytest.mark.usefixtures("version", "os_sep")
 def test_tox_raspi_ci(

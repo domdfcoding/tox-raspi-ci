@@ -111,7 +111,7 @@ def tox_configure(config: tox.config.Config) -> tox.config.Config:
 			raspi_ci_envlist = True
 
 	if raspi_ci_envlist and envlist_set:
-		tox.reporter.warning(f"Ignoring {option_name!r} option as '-e / --envlist' option given.", )
+		tox.reporter.warning(f"Ignoring {option_name!r} option as '-e / --envlist' option given.")
 
 	elif "raspi" in envlists:
 		if raspi_ci_envlist:
