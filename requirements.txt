@@ -2,3 +2,4 @@ braceexpand>=0.1.6
 pluggy>=0.13.1
 tox>=3.24.5
 tox-envlist>=0.3.0
+virtualenv!=20.16.0,<20.39
