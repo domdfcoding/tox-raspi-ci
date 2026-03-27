@@ -20,7 +20,7 @@ ___________________________________ summary ____________________________________
   py37: commands succeeded
   py38: commands succeeded
   py39: commands succeeded
-  py310-dev: commands succeeded
+  py310: commands succeeded
   mypy: commands succeeded
   build: commands succeeded
   congratulations :)
