@@ -25,13 +25,15 @@ def version(request) -> str:
 				pytest.param(
 						"forward",
 						marks=pytest.mark.skipif(
-								os.sep == '\\', reason=r"Output differs on platforms where os.sep == '\\'"
+								os.sep == '\\',
+								reason=r"Output differs on platforms where os.sep == '\\'",
 								),
 						),
 				pytest.param(
 						"backward",
 						marks=pytest.mark.skipif(
-								os.sep == '/', reason="Output differs on platforms where os.sep == '/'"
+								os.sep == '/',
+								reason="Output differs on platforms where os.sep == '/'",
 								),
 						),
 				],
