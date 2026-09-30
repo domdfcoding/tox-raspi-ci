@@ -15,7 +15,8 @@ example_tox = PathPlus(__file__).parent / "example_tox_braces.ini"
 
 @pytest.fixture()
 def toxinidir(tmp_pathplus: PathPlus) -> PathPlus:
-	(tmp_pathplus / "tox.ini").write_text(example_tox.read_text())
+	content = example_tox.read_text() % f"py{sys.version_info[0]}{sys.version_info[1]}"
+	(tmp_pathplus / "tox.ini").write_text(content)
 	return tmp_pathplus
 
 
